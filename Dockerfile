@@ -11,3 +11,14 @@ ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
 # Needed for pytest when run tests with docker exec -it
 ENV TERM xterm
+
+# Install python dev tools
+RUN pip install pytest \
+      pytest-cov \
+      pytest-greendots \
+      pytest-flask \
+      coverage \
+      pylint \
+      pylint-flask \
+      flake8 \
+      mypy
